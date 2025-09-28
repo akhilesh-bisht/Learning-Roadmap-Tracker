@@ -102,7 +102,7 @@ export default function RoadmapTracker() {
     sectionIndex: 0,
     title: "",
     difficulty: "Medium",
-    timeEstimate: "2 hours",
+    timeEstimate: "3 hours",
   })
   const [activeTimer, setActiveTimer] = useState<{
     sectionIndex: number
@@ -296,7 +296,7 @@ export default function RoadmapTracker() {
         }
 
         toast({
-          title: "Topic completed!",
+          title: "Topic completed!.",
           description: `You've completed "${item.title}"`,
         })
       } else {
@@ -333,7 +333,7 @@ export default function RoadmapTracker() {
       case "Hard":
         return "bg-red-500"
       default:
-        return "bg-indigo-500"
+        return "bg-indigo-600"
     }
   }
 
@@ -459,7 +459,7 @@ export default function RoadmapTracker() {
 
     toast({
       title: "Notes saved",
-      description: "Your notes have been saved successfully",
+      description: "Your notes have been saved successfully!",
     })
   }
 
@@ -494,11 +494,11 @@ export default function RoadmapTracker() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-9">
       <div className="flex flex-col items-center mb-8">
         <div className="flex items-center justify-between w-full max-w-3xl mb-4">
           <h1 className="text-3xl font-bold">Learning Roadmap Tracker</h1>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
